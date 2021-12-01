@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallex Scrolling website | Vanilla Javascript</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header id="header">
+    <a href="#" class="logo">Jungle</a>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Destination</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+  <section>
+    <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+    <img src="bird1.png" alt="" id="bird1">
+    <img src="bird2.png" alt="" id="bird2">
+    <img src="forest.png" alt="" id="forest">
+    <a href="#" id="btn">Explore</a>
+    <img src="rocks.png" alt="" id="rocks">
+    <img src="water.png" alt="" id="water">
+  </section>
+  <div class="sec">
+    <h2>Parallax Scrolling Effects</h2>
+    <p>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sint exercitationem accusamus ratione. Consequuntur, eum nulla at possimus quaerat soluta similique nihil. Labore odio asperiores aut id in rem, nulla sed incidunt magni possimus voluptas nesciunt adipisci tempora laborum modi, blanditiis nemo expedita? Earum, eligendi debitis voluptates explicabo error consectetur voluptatum asperiores. Qui et provident deserunt corporis quod quae laboriosam deleniti beatae? Maxime quas ipsa saepe iusto laborum mollitia illo excepturi nobis exercitationem voluptates ipsam voluptas quos, repellat molestiae ad magni! Non labore ea maiores similique minima. Sit aliquam quaerat a ab perspiciatis quasi harum dolorum quidem, maxime quam tempore natus cum tenetur. Porro dolore ex eaque accusamus architecto quae eos officia nam repellat. Explicabo quo in quos dolorum. Aperiam recusandae reiciendis eaque facere quis minus vitae doloremque blanditiis, impedit quidem sit natus fuga aliquam. Corrupti ullam dolor quae! Accusantium quas repellat totam eligendi suscipit animi sequi impedit, temporibus enim doloremque nam nobis officiis possimus quasi natus voluptate sapiente esse delectus consequuntur minima id nostrum consequatur! Fugit minus, modi laboriosam ut fuga quasi voluptatum odio! Magni alias sequi tempora earum autem rerum beatae aut vel, nulla expedita. Optio tempore magni cupiditate atque, id ea eligendi asperiores modi laborum possimus blanditiis dolore ipsa pariatur. Repudiandae vitae, amet voluptatum nisi culpa rem labore accusantium iusto quo, mollitia quaerat dignissimos laborum officiis natus similique repellendus! Nobis velit sapiente voluptatum! Sunt at voluptatibus vero voluptatem, cum itaque consectetur nulla quia quaerat laudantium. Dolor nobis maiores asperiores, enim natus perferendis adipisci neque odit, illum alias id nostrum. Harum laudantium dolorem voluptatem officiis incidunt ab non, nulla dolores odit hic quae repellat aperiam est quidem sint quo! Maxime veniam commodi consectetur, nisi in voluptate numquam alias recusandae sit nulla hic quidem tenetur. Quasi nihil perspiciatis inventore beatae consectetur hic cumque id a ut odio. Temporibus dignissimos iure expedita, officiis libero in consectetur! Deleniti quis nobis aliquam explicabo ipsam distinctio a, quos harum minima veritatis consequuntur maxime voluptates ipsa provident. Vel iure accusantium distinctio deserunt tempore fugit consectetur nulla modi, reprehenderit corrupti. Quisquam maxime laudantium commodi, adipisci hic cupiditate eligendi, est ducimus eos distinctio iusto, pariatur voluptatem at molestias. Alias reiciendis ducimus perspiciatis, praesentium doloremque maiores, tenetur corrupti facilis molestiae, eum accusamus nihil ipsam unde hic quasi quas. Veniam rerum distinctio obcaecati. Quisquam, et maiores reprehenderit ratione laboriosam id. Recusandae laboriosam, veritatis aperiam similique officiis alias explicabo debitis, maiores sapiente culpa ex dicta? Quaerat eveniet ipsa modi vero cum fuga excepturi ut assumenda natus distinctio aut ducimus laborum quibusdam sed beatae facilis quis deserunt sapiente illum, hic alias veniam. Enim, vel. Neque quas ipsa nihil dignissimos necessitatibus quisquam distinctio hic eos repudiandae dolore, laboriosam vel ratione quo quae suscipit est? Consectetur recusandae enim tempore ipsa inventore delectus commodi illo beatae maxime, voluptas ducimus tempora eaque! Earum voluptatibus nemo, itaque eum commodi atque odio dolore nostrum, aliquam fugit eaque est. Ipsam beatae excepturi laboriosam, voluptate dicta exercitationem ipsa accusantium provident optio, veniam aliquid, nam repudiandae inventore totam corporis. Illo odit maxime quisquam eos distinctio omnis, cumque at dolorum!
+    </p>
+  </div>
+  <script>
+    let text = document.getElementById('text');
+    let bird1 = document.getElementById('bird1');
+    let bird2 = document.getElementById('bird2');
+    let btn = document.getElementById('btn');
+    let rocks = document.getElementById('rocks');
+    let forest = document.getElementById('forest');
+    let water = document.getElementById('water');
+    let header = document.getElementById('header');
+
+
+    window.addEventListener('scroll', function () {
+      let value = window.scrollY;
+      text.style.top = 50 + value * -0.5 + '%';
+      bird1.style.top = value * -1.5 + 'px';
+      bird1.style.left = value * -1.5 + 'px';
+      bird2.style.top = valye * 2 + 'px';
+      bird2.style.left = valye * -5 + 'px';
+      btn.style.marginTop = value * 1.5 + 'px';
+      rocks.style.top = value * -0.12 + 'px';
+      forest.style.top = value * 0.25 + 'px';
+      header.style.top = value * 0.5 + 'px';
+    })
+  </script>
+</body>
+</html>
